@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Russo+One&family=Sen:wght@400;700&family=Shadows+Into+Light+Two&display=swap");
+
+:root {
+  --bodyColor: #000;
+  --mainColor: #1a243f;
+  --hoverColor: #e33a3a;
+  --whiteColor: #fff;
+  --pinkColor: #fab6cf;
+
+  --nothingFont: "Nothing You Could Do", cursive;
+  --shadowsFont: "Shadows Into Light Two", cursive;
+  --russoFont: "Russo One", sans-serif;
+  --senFont: "Sen", sans-serif;
+}
+
+* {
+  /* border: 1px solid white; */
+  padding: 0;
+}
+
+app-content {
+  display: none;
+}
+
+.row {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+body {
+  background-color: var(--bodyColor) !important;
+}
+
+nav {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navbar {
+  margin: 0 20px;
+}
+
+.navbar-brand img {
+  padding: 10px;
+  max-height: 50px;
+}
+
+.nav-item {
+  padding: 0 10px;
+  display: block;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  color: var(--whiteColor) !important;
+  font-size: 18px;
+  font-family: var(--shadowsFont);
+}
+
+.nav-link:hover {
+  color: var(--hoverColor) !important;
+}
+
+.mainPhoto {
+  height: 100vh;
+  background-image: url("../img/mainPhoto.jpg");
+  background-size: cover;
+}
+
+.coverArea {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+  font-family: var(--nothingFont);
+  padding: 40px 0;
+}
+
+.coverArea img {
+  width: 300px;
+}
+
+.albumLyrics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+
+.streamingAlbumIcons {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 15px;
+}
+
+.streamingAlbumIcons img {
+  width: 20%;
+  align-self: flex-end;
+  opacity: 0.5;
+  transition: 0.2s ease-in-out;
+}
+
+.streamingAlbumIcons img:hover {
+  opacity: 0.9;
+}
+
+.streamingAlbumIcons a {
+  display: contents;
+}
+
+.coverArea h1 {
+  color: var(--pinkColor);
+  font-size: 30px;
+}
+
+.coverArea p {
+  font-size: 24px;
+}
+
+.socialIcons {
+  position: absolute;
+  right: 1%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.socialIcons ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.socialIcons img {
+  max-width: 50px;
+  margin: 5px 0;
+  opacity: 0.3;
+  transition: 0.2s ease-in-out;
+}
+
+.socialIcons img:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.helloArea {
+  color: var(--whiteColor);
+  font-family: var(--shadowsFont);
+}
+
+.helloArea h1 {
+  color: var(--pinkColor);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.helloArea p {
+  line-height: 250%;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+}
+
+.songTitle {
+  position: absolute;
+  z-index: 10000;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 0;
+  color: var(--whiteColor);
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 24px;
+  font-family: var(--shadowsFont);
+  width: 80%;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.musicCover {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.musicCover img {
+  width: 100%;
+  height: 100%;
+}
+
+.musicOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #313131;
+  opacity: 0.6;
+  height: 100%;
+  width: 100%;
+}
+
+.playButton {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 30% !important;
+  height: 30% !important;
+  transform: translate(-50%, -50%);
+  opacity: 0.7;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.playButton:hover {
+  opacity: 0.9;
+}
+
+.concertDate {
+  font-family: var(--russoFont);
+  font-size: 3.5vmin;
+}
+
+.concertCity {
+  font-family: var(--senFont);
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.concertLocation {
+  font-family: var(--senFont);
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.ticketAvailable {
+  width: 200px;
+  height: 50px;
+  background-color: var(--mainColor);
+  border: 0;
+  border-radius: 21px;
+  font-size: 18px;
+  font-family: var(--senFont);
+  font-weight: 700;
+  color: var(--whiteColor);
+}
+
+.concertsArea h1 {
+  color: var(--pinkColor);
+  text-align: center;
+  font-family: var(--shadowsFont);
+}
+
+.concertRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--whiteColor);
+}
+
+.concertInfo {
+  display: flex;
+  justify-content: space-around;
+}

@@ -14,7 +14,202 @@
     />
   </head>
   <body>
-    <h1>Przykładowy tekst</h1>
+    <!-- -----------------------------
+    NAVBAR
+    ----------------------------- -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#"
+        ><img src="img/logoAgata.png" alt=""
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navToggler"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navToggler">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Strona główna</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Koncerty</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Muzyka</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sklep</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- -----------------------------
+    MAIN PHOTO
+    ----------------------------- -->
+
+    <div class="container-fluid p-0">
+      <div class="col-12 mainPhoto p-0"></div>
+      <div class="socialIcons">
+        <ul>
+          <li>
+            <img src="img/socialMediaIcons/facebookIcon.png" alt="" />
+          </li>
+          <li>
+            <img src="img/socialMediaIcons/instagramIcon.png" alt="" />
+          </li>
+          <li>
+            <img src="img/socialMediaIcons/emailIcon.png" alt="" />
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- -----------------------------
+    ALBUM COVER
+    ----------------------------- -->
+    <div class="row coverArea">
+      <div
+        class="offset-md-1 col-md-10 offset-lg-2 col-lg-8 d-flex justify-content-between py-5 px-0"
+      >
+        <img src="img/coversMusic/albumCover.jpg" />
+        <div class="albumLyrics">
+          <h1>Life is a travel, so go</h1>
+          <p>
+            where you want to...<br />
+            where you need to...<br />
+            who you love to...
+          </p>
+          <div class="streamingAlbumIcons">
+            <a href="#"
+              ><img src="img/streamingIcons/tidalLogoVertical.png" alt="" /></a
+            ><a href="#"
+              ><img src="img/streamingIcons/spotifyLogo.png" alt="" /></a
+            ><a href="#"
+              ><img src="img/streamingIcons/appleLogo.png" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- -----------------------------
+    HELLO TEXT
+    ----------------------------- -->
+
+    <div class="container helloArea">
+      <div class="row">
+        <div
+          class="col-12 col-lg-10 col-xl-8 offset-lg-1 offset-xl-2 py-5 px-md-5"
+        >
+          <h1>Dzień dobry!</h1>
+          <p>
+            Nazywam się Agata Pietrasiak, ale prawdopodobnie znacie mnie po
+            prostu jako AGATA. Śpiewam, gram na ukulele i pianinie, a od
+            niedawna piszę też książki, a właściwie książkę, bo póki co wyszła
+            tylko jedna. Witam Cię w moim świecie! Znajdziecie tu linki do mojej
+            nowej płyty “Nervous”, którą nagrałam dla Was na początku tego roku
+            i wszystkie teledyski, których kręcenie sprawiało mi niesamowitą
+            frajdę. Oprócz tego znajdują się tu informacje o koncertach i
+            wydarzeniach, w których będę brała udział. Tych darmowych i tych
+            biletowanych. Znajdziecie tu też link do sklepu, gdzie możecie
+            znaleźć moje płyty, koszulki, kubki, torby i wiele innych. No i moją
+            książkę! Ostatnio napisałam! Ale o tym już chyba Wam mówiłam.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- -----------------------------
+    MUSIC
+    ----------------------------- -->
+
+    <div class="musicArea container">
+      <div class="row g-4">
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto">
+          <div class="musicCover">
+            <img src="img/coversMusic/cover1.jpg" alt="" srcset="" />
+            <span class="musicOverlay"></span>
+            <img class="playButton" src="img/playIcon.png" />
+            <span class="songTitle">My future past</span>
+          </div>
+        </div>
+
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto">
+          <div class="musicCover">
+            <img src="img/coversMusic/cover2.jpg" alt="" srcset="" />
+            <span class="musicOverlay"></span>
+            <img class="playButton" src="img/playIcon.png" />
+            <span class="songTitle">Cisza</span>
+          </div>
+        </div>
+
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto">
+          <div class="musicCover">
+            <img src="img/coversMusic/cover3.jpg" alt="" srcset="" />
+            <span class="musicOverlay"></span>
+            <img class="playButton" src="img/playIcon.png" />
+            <span class="songTitle">No trudno</span>
+          </div>
+        </div>
+
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto">
+          <div class="musicCover">
+            <img src="img/coversMusic/cover4.jpg" alt="" srcset="" />
+            <span class="musicOverlay"></span>
+            <img class="playButton" src="img/playIcon.png" />
+            <span class="songTitle">What it’s gonna be</span>
+          </div>
+        </div>
+
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto">
+          <div class="musicCover">
+            <img src="img/coversMusic/cover5.jpg" alt="" srcset="" />
+            <span class="musicOverlay"></span>
+            <img class="playButton" src="img/playIcon.png" />
+            <span class="songTitle">Miss Peggy H.</span>
+          </div>
+        </div>
+
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto">
+          <div class="musicCover">
+            <img src="img/coversMusic/cover6.jpg" alt="" srcset="" />
+            <span class="musicOverlay"></span>
+            <img class="playButton" src="img/playIcon.png" />
+            <span class="songTitle">I don’t get you</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concertsArea container">
+      <div class="row my-5">
+        <div class="col-12 col-xl-10 mx-auto">
+          <h1>Koncerty</h1>
+
+          <div class="concertRow">
+            <div
+              class="concertInfo flex-column flex-lg-row align-items-lg-center justify-content-lg-between w-100 w-lg-70"
+            >
+              <span class="concertDate">13 STYCZNIA, 18.00</span
+              ><span class="concertCity">BYDGOSZCZ</span>
+              <span class="concertLocation">FILHARMONIA POMORSKA</span>
+            </div>
+            <div class="concertTicket">
+              <button class="ticketAvailable">KUP BILET</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="script/main.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
