@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Russo+One&family=Sen:wght@400;700&family=Shadows+Into+Light+Two&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Poiret+One&family=Russo+One&family=Sen:wght@400;700&family=Shadows+Into+Light+Two&display=swap");
 :root {
   --bodyColor: #000;
   --mainColor: #1a243f;
@@ -12,6 +11,7 @@
   --shadowsFont: "Shadows Into Light Two", cursive;
   --russoFont: "Russo One", sans-serif;
   --senFont: "Sen", sans-serif;
+  --poiretFont: "Poiret One", cursive;
 }
 
 * {
@@ -294,7 +294,7 @@ nav {
 .storeArea h1 {
   color: var(--pinkColor);
   font-family: var(--shadowsFont);
-  font-size: 30px;
+  font-size: 20px;
   border-bottom: 2px solid var(--pinkColor);
   display: inline-block;
   align-self: center;
@@ -303,14 +303,17 @@ nav {
 .storeArea h2 {
   color: var(--whiteColor);
   font-family: var(--shadowsFont);
-  font-size: 22px;
-  margin: 0 0 0 40px;
+  font-size: 16px;
   display: inline-block;
   align-self: flex-end;
 }
 
 .storeArea {
   padding: 0;
+}
+
+.storeArea a {
+  display: contents;
 }
 
 .review {
@@ -337,6 +340,7 @@ nav {
   justify-content: center;
   flex-direction: column;
   margin-bottom: 30px;
+  width: 100%;
 }
 
 .storeArea button {
@@ -348,4 +352,133 @@ nav {
   border: 0;
   align-self: flex-end;
   font-weight: 700;
+}
+
+.footerArea {
+  background-color: var(--mainColor);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footerLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerLeftTop {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 20px 5px;
+}
+
+.footerLeftTop img {
+  width: 30%;
+  opacity: 0.4;
+  transition: 0.2s ease-in-out;
+}
+
+.footerLeftTop img:hover {
+  opacity: 0.9;
+}
+
+.footerLeftBottom {
+  color: var(--whiteColor);
+  padding: 30px 0;
+  font-family: var(--poiretFont);
+  font-size: 22px;
+  text-align: center;
+  opacity: 0.3;
+}
+
+@media (min-width: 768px) {
+  .storeArea h1 {
+    font-size: 30px;
+  }
+
+  .storeArea h2 {
+    font-size: 22px;
+    margin: 0 0 0 40px;
+  }
+
+  .footerLeftBottom {
+    font-size: 24px;
+  }
+
+  .ticketAvailable,
+  .ticketUnavailable,
+  .ticketFree {
+    width: 200px;
+  }
+}
+
+@media (min-width: 576px) {
+  .footerLeftTop img {
+    width: 20%;
+  }
+
+  .footerLeftTop {
+    padding: 30px 5px;
+  }
+}
+
+.footerRight {
+  width: 40%;
+  padding: 2%;
+}
+
+.horizontalLine {
+  height: 1px;
+  width: 90%;
+  background-color: var(--whiteColor);
+  display: block;
+  opacity: 0.4;
+}
+
+.verticalLine {
+  height: 75%;
+  width: 1px;
+  background-color: var(--whiteColor);
+  display: block;
+  opacity: 0.3;
+}
+
+.socialFooterIcon {
+  color: var(--whiteColor);
+  opacity: 0.3;
+  padding: 10px 40px;
+  font-family: var(--poiretFont);
+  font-size: 24px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: 0.2s ease-in-out;
+}
+
+.socialFooterIcon:hover {
+  opacity: 0.9;
+}
+
+.socialFooterIcon img {
+  width: 12%;
+  margin-right: 30px;
+}
+
+.footerArea a {
+  text-decoration: none;
+  display: contents;
+  color: var(--whiteColor);
+}
+
+.mobileContact img {
+  width: 14%;
+  opacity: 0.3;
+  padding: 15px 10px;
+  transition: 0.2s ease-in-out;
+}
+
+.mobileContact img:hover {
+  opacity: 0.9;
 }
