@@ -237,7 +237,7 @@ nav {
 .ticketAvailable,
 .ticketUnavailable,
 .ticketFree {
-  width: 200px;
+  width: 150px;
   height: 50px;
   border: 0;
   border-radius: 21px;
@@ -296,5 +296,56 @@ nav {
   font-family: var(--shadowsFont);
   font-size: 30px;
   border-bottom: 2px solid var(--pinkColor);
-  display: inline;
+  display: inline-block;
+  align-self: center;
+}
+
+.storeArea h2 {
+  color: var(--whiteColor);
+  font-family: var(--shadowsFont);
+  font-size: 22px;
+  margin: 0 0 0 40px;
+  display: inline-block;
+  align-self: flex-end;
+}
+
+.storeArea {
+  padding: 0;
+}
+
+.review {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.review img {
+  width: 20%;
+}
+
+.review p {
+  width: 75%;
+  color: var(--whiteColor);
+  font-family: var(--senFont);
+  font-weight: 400;
+}
+
+.storeHeader {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.storeArea button {
+  background-color: transparent;
+  color: var(--pinkColor);
+  font-family: var(--senFont);
+  text-decoration: underline;
+  text-transform: uppercase;
+  border: 0;
+  align-self: flex-end;
+  font-weight: 700;
 }
