@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Poiret+One&family=Russo+One&family=Sen:wght@400;700&family=Shadows+Into+Light+Two&display=swap");
+
+/* GENERAL
+----------------------- */
+
 :root {
   --bodyColor: #000;
   --mainColor: #1a243f;
@@ -30,6 +34,9 @@ app-content {
 body {
   background-color: var(--bodyColor) !important;
 }
+
+/* NAVIGATION
+----------------------- */
 
 nav {
   position: absolute !important;
@@ -63,11 +70,42 @@ nav {
   color: var(--hoverColor) !important;
 }
 
+/* MAIN PHOTO
+----------------------- */
+
 .mainPhoto {
   height: 100vh;
   background-image: url("../img/mainPhoto.jpg");
   background-size: cover;
 }
+
+.socialIcons {
+  position: absolute;
+  right: 1%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.socialIcons ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.socialIcons img {
+  max-width: 50px;
+  margin: 5px 0;
+  opacity: 0.3;
+  transition: 0.2s ease-in-out;
+}
+
+.socialIcons img:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+/* ALBUM COVER
+----------------------- */
 
 .coverArea {
   background-color: var(--mainColor);
@@ -78,6 +116,15 @@ nav {
 
 .coverArea img {
   width: 300px;
+}
+
+.coverArea h1 {
+  color: var(--pinkColor);
+  font-size: 30px;
+}
+
+.coverArea p {
+  font-size: 24px;
 }
 
 .albumLyrics {
@@ -109,39 +156,8 @@ nav {
   display: contents;
 }
 
-.coverArea h1 {
-  color: var(--pinkColor);
-  font-size: 30px;
-}
-
-.coverArea p {
-  font-size: 24px;
-}
-
-.socialIcons {
-  position: absolute;
-  right: 1%;
-  top: 50%;
-  transform: translate(0, -50%);
-}
-
-.socialIcons ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.socialIcons img {
-  max-width: 50px;
-  margin: 5px 0;
-  opacity: 0.3;
-  transition: 0.2s ease-in-out;
-}
-
-.socialIcons img:hover {
-  opacity: 0.9;
-  cursor: pointer;
-}
+/* HELLO TEXT
+----------------------- */
 
 .helloArea {
   color: var(--whiteColor);
@@ -160,20 +176,8 @@ nav {
   letter-spacing: 0.05em;
 }
 
-.songTitle {
-  position: absolute;
-  z-index: 10000;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  bottom: 0;
-  color: var(--whiteColor);
-  background: rgba(0, 0, 0, 0.4);
-  font-size: 24px;
-  font-family: var(--shadowsFont);
-  width: 80%;
-  text-align: center;
-  padding: 5px 0;
-}
+/* MUSIC
+----------------------- */
 
 .musicCover {
   position: relative;
@@ -197,6 +201,21 @@ nav {
   width: 100%;
 }
 
+.songTitle {
+  position: absolute;
+  z-index: 10000;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 0;
+  color: var(--whiteColor);
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 24px;
+  font-family: var(--shadowsFont);
+  width: 80%;
+  text-align: center;
+  padding: 5px 0;
+}
+
 .playButton {
   position: absolute;
   left: 50%;
@@ -211,6 +230,27 @@ nav {
 
 .playButton:hover {
   opacity: 0.9;
+}
+
+/* CONCERTS
+----------------------- */
+
+.concertsArea h1 {
+  color: var(--pinkColor);
+  text-align: center;
+  font-family: var(--shadowsFont);
+}
+
+.concertRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--whiteColor);
+}
+
+.concertInfo {
+  width: 75%;
+  display: flex;
 }
 
 .concertDate {
@@ -268,23 +308,15 @@ nav {
   opacity: 1;
 }
 
-.concertsArea h1 {
-  color: var(--pinkColor);
-  text-align: center;
-  font-family: var(--shadowsFont);
+/* STORE
+----------------------- */
+
+.storeArea {
+  padding: 0;
 }
 
-.concertRow {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--whiteColor);
-}
-
-.concertInfo {
-  width: 75%;
-  display: flex;
-  /* justify-content: space-between; */
+.storeArea a {
+  display: contents;
 }
 
 .storeArea img {
@@ -308,12 +340,23 @@ nav {
   align-self: flex-end;
 }
 
-.storeArea {
-  padding: 0;
+.storeArea button {
+  background-color: transparent;
+  color: var(--pinkColor);
+  font-family: var(--senFont);
+  text-decoration: underline;
+  text-transform: uppercase;
+  border: 0;
+  align-self: flex-end;
+  font-weight: 700;
 }
 
-.storeArea a {
-  display: contents;
+.storeHeader {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+  width: 100%;
 }
 
 .review {
@@ -335,30 +378,20 @@ nav {
   font-weight: 400;
 }
 
-.storeHeader {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-bottom: 30px;
-  width: 100%;
-}
-
-.storeArea button {
-  background-color: transparent;
-  color: var(--pinkColor);
-  font-family: var(--senFont);
-  text-decoration: underline;
-  text-transform: uppercase;
-  border: 0;
-  align-self: flex-end;
-  font-weight: 700;
-}
+/* CONTACT/FOOTER
+----------------------- */
 
 .footerArea {
   background-color: var(--mainColor);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.footerArea a {
+  text-decoration: none;
+  display: contents;
+  color: var(--whiteColor);
 }
 
 .footerLeft {
@@ -391,37 +424,6 @@ nav {
   font-size: 22px;
   text-align: center;
   opacity: 0.3;
-}
-
-@media (min-width: 768px) {
-  .storeArea h1 {
-    font-size: 30px;
-  }
-
-  .storeArea h2 {
-    font-size: 22px;
-    margin: 0 0 0 40px;
-  }
-
-  .footerLeftBottom {
-    font-size: 24px;
-  }
-
-  .ticketAvailable,
-  .ticketUnavailable,
-  .ticketFree {
-    width: 200px;
-  }
-}
-
-@media (min-width: 576px) {
-  .footerLeftTop img {
-    width: 20%;
-  }
-
-  .footerLeftTop {
-    padding: 30px 5px;
-  }
 }
 
 .footerRight {
@@ -466,12 +468,6 @@ nav {
   margin-right: 30px;
 }
 
-.footerArea a {
-  text-decoration: none;
-  display: contents;
-  color: var(--whiteColor);
-}
-
 .mobileContact img {
   width: 14%;
   opacity: 0.3;
@@ -481,4 +477,38 @@ nav {
 
 .mobileContact img:hover {
   opacity: 0.9;
+}
+
+/* MEDIA QUERIES
+----------------------- */
+
+@media (min-width: 768px) {
+  .storeArea h1 {
+    font-size: 30px;
+  }
+
+  .storeArea h2 {
+    font-size: 22px;
+    margin: 0 0 0 40px;
+  }
+
+  .footerLeftBottom {
+    font-size: 24px;
+  }
+
+  .ticketAvailable,
+  .ticketUnavailable,
+  .ticketFree {
+    width: 200px;
+  }
+}
+
+@media (min-width: 576px) {
+  .footerLeftTop img {
+    width: 20%;
+  }
+
+  .footerLeftTop {
+    padding: 30px 5px;
+  }
 }
