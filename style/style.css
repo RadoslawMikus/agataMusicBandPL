@@ -6,6 +6,7 @@
   --hoverColor: #e33a3a;
   --whiteColor: #fff;
   --pinkColor: #fab6cf;
+  --greenColor: #64a545;
 
   --nothingFont: "Nothing You Could Do", cursive;
   --shadowsFont: "Shadows Into Light Two", cursive;
@@ -215,30 +216,56 @@ nav {
 .concertDate {
   font-family: var(--russoFont);
   font-size: 3.5vmin;
+  flex-basis: 40%;
+  flex-shrink: 0;
 }
 
 .concertCity {
   font-family: var(--senFont);
   font-weight: 700;
   font-size: 22px;
+  flex-grow: 1;
 }
 
 .concertLocation {
   font-family: var(--senFont);
   font-weight: 400;
   font-size: 18px;
+  flex-grow: 0;
 }
 
-.ticketAvailable {
+.ticketAvailable,
+.ticketUnavailable,
+.ticketFree {
   width: 200px;
   height: 50px;
-  background-color: var(--mainColor);
   border: 0;
   border-radius: 21px;
   font-size: 18px;
   font-family: var(--senFont);
   font-weight: 700;
   color: var(--whiteColor);
+  opacity: 0.9;
+  transition: 0.2s ease-in-out;
+}
+
+.ticketAvailable {
+  background-color: var(--mainColor);
+}
+
+.ticketUnavailable {
+  background: #6a6a6a;
+  color: #dadada;
+}
+
+.ticketFree {
+  background-color: var(--greenColor);
+}
+
+.ticketAvailable:hover,
+.ticketUnavailable:hover,
+.ticketFree:hover {
+  opacity: 1;
 }
 
 .concertsArea h1 {
@@ -255,6 +282,19 @@ nav {
 }
 
 .concertInfo {
+  width: 75%;
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-between; */
+}
+
+.storeArea img {
+  width: 100%;
+}
+
+.storeArea h1 {
+  color: var(--pinkColor);
+  font-family: var(--shadowsFont);
+  font-size: 30px;
+  border-bottom: 2px solid var(--pinkColor);
+  display: inline;
 }
