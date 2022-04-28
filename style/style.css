@@ -19,7 +19,6 @@
 }
 
 * {
-  /* border: 1px solid white; */
   padding: 0;
 }
 
@@ -326,7 +325,7 @@ nav {
 .storeArea h1 {
   color: var(--pinkColor);
   font-family: var(--shadowsFont);
-  font-size: 20px;
+  font-size: 22px;
   border-bottom: 2px solid var(--pinkColor);
   display: inline-block;
   align-self: center;
@@ -337,7 +336,7 @@ nav {
   font-family: var(--shadowsFont);
   font-size: 16px;
   display: inline-block;
-  align-self: flex-end;
+  align-self: center;
 }
 
 .storeArea button {
@@ -483,15 +482,6 @@ nav {
 ----------------------- */
 
 @media (min-width: 768px) {
-  .storeArea h1 {
-    font-size: 30px;
-  }
-
-  .storeArea h2 {
-    font-size: 22px;
-    margin: 0 0 0 40px;
-  }
-
   .footerLeftBottom {
     font-size: 24px;
   }
@@ -504,6 +494,14 @@ nav {
 }
 
 @media (min-width: 576px) {
+  .storeArea h1 {
+    font-size: 30px;
+  }
+
+  .storeArea h2 {
+    font-size: 22px;
+  }
+
   .footerLeftTop img {
     width: 20%;
   }
