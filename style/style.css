@@ -382,9 +382,6 @@ nav {
 
 .footerArea {
   background-color: var(--mainColor);
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
 }
 
 .footerArea a {
