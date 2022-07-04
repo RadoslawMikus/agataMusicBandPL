@@ -419,7 +419,7 @@ nav {
   font-family: var(--poiretFont);
   font-size: 22px;
   text-align: center;
-  opacity: 0.3;
+  opacity: 0.4;
 }
 
 .footerRight {
@@ -445,7 +445,7 @@ nav {
 
 .socialFooterIcon {
   color: var(--whiteColor);
-  opacity: 0.3;
+  opacity: 0.4;
   padding: 10px 40px;
   font-family: var(--poiretFont);
   font-size: 24px;
