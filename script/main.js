@@ -10,7 +10,8 @@ const music = {
 
 playButtons.forEach((playButton, index) => {
   playButton.setAttribute("id", "audio" + (index + 1));
-  playButton.addEventListener("click", (e) => {
+
+  const playTheSong = (e) => {
     // --------------------------
     // IF CLICKED IS NOT PLAYING
     // STOP ALL AND PLAY CLICKED
@@ -35,6 +36,12 @@ playButtons.forEach((playButton, index) => {
     } else {
       music[e.target.id].pause();
       playButton.setAttribute("src", "img/playIcon.png");
+    }
+  };
+  playButton.addEventListener("click", playTheSong);
+  playButton.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      playTheSong(e);
     }
   });
 });

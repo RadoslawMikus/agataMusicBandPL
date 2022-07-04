@@ -1,0 +1,531 @@
+/* GENERAL
+----------------------- */
+
+$mainColor: #1a243f;
+$hoverColor: #e33a3a;
+$pinkColor: #fab6cf;
+$greenColor: #64a545;
+
+$nothingFont: "Nothing You Could Do", cursive;
+$shadowsFont: "Shadows Into Light Two", cursive;
+$russoFont: "Russo One", sans-serif;
+$senFont: "Sen", sans-serif;
+$poiretFont: "Poiret One", cursive;
+
+* {
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+}
+
+.row {
+  padding: 0;
+  margin: 0;
+}
+
+/* NAVIGATION
+----------------------- */
+
+nav {
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navbar {
+  margin: 0 20px;
+}
+
+.navbar-brand img {
+  padding: 10px;
+  max-height: 50px;
+}
+
+.nav-item {
+  padding: 0 10px;
+  display: block;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  font: {
+    size: 18px;
+    family: $shadowsFont;
+  }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+
+  &:hover {
+    color: $hoverColor;
+  }
+}
+
+/* MAIN PHOTO
+----------------------- */
+
+.mainPhoto {
+  height: 100vh;
+  background: {
+    image: url("../img/mainPhoto.jpg");
+    size: cover;
+  }
+}
+
+.socialIcons {
+  position: absolute;
+  right: 1%;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  img {
+    max-width: 50px;
+    margin: 5px 0;
+    opacity: 0.3;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 0.9;
+      cursor: pointer;
+    }
+  }
+}
+
+/* ALBUM COVER
+----------------------- */
+
+.coverArea {
+  background-color: $mainColor;
+  font-family: $nothingFont;
+  color: #fff;
+  padding: 40px 0;
+
+  img {
+    width: 300px;
+  }
+
+  h1 {
+    color: $pinkColor;
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 24px;
+  }
+}
+
+.albumLyrics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+
+.streamingAlbumIcons {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 15px;
+
+  img {
+    width: 20%;
+    align-self: flex-end;
+    opacity: 0.5;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  a {
+    display: contents;
+  }
+}
+
+/* HELLO TEXT
+----------------------- */
+
+.helloArea {
+  color: #fff;
+  font-family: $shadowsFont;
+
+  h1 {
+    color: $pinkColor;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  p {
+    line-height: 250%;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+  }
+}
+
+/* MUSIC
+----------------------- */
+
+.musicCover {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .playButton {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 30%;
+    height: 30%;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+.musicOverlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #313131;
+  opacity: 0.6;
+}
+
+.songTitle {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  font: {
+    size: 24px;
+    family: $shadowsFont;
+  }
+  text-align: center;
+  padding: 5px 0;
+}
+
+/* CONCERTS
+----------------------- */
+
+.concertsArea h1 {
+  color: $pinkColor;
+  text-align: center;
+  font-family: $shadowsFont;
+}
+
+.concertRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.concertInfo {
+  width: 75%;
+  display: flex;
+}
+
+.concertDate {
+  font: {
+    family: $russoFont;
+    size: 3.5vmin;
+  }
+  flex: {
+    basis: 40%;
+    shrink: 0;
+  }
+}
+
+.concertCity {
+  font: {
+    family: $senFont;
+    weight: 700;
+    size: 22px;
+  }
+  flex-grow: 1;
+}
+
+.concertLocation {
+  font: {
+    family: $senFont;
+    weight: 400;
+    size: 18px;
+  }
+  flex-grow: 0;
+}
+
+.ticketAvailable,
+.ticketUnavailable,
+.ticketFree {
+  width: 150px;
+  height: 50px;
+  border: 0 {
+    radius: 21px;
+  }
+  font: {
+    size: 18px;
+    family: $senFont;
+    weight: 700;
+  }
+  color: #fff;
+  opacity: 0.9;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.ticketAvailable {
+  background-color: $mainColor;
+}
+
+.ticketUnavailable {
+  background: #6a6a6a;
+  color: #dadada;
+}
+
+.ticketFree {
+  background-color: $greenColor;
+}
+
+/* STORE
+----------------------- */
+
+.storeArea {
+  padding: 0;
+
+  a {
+    display: contents;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  h1 {
+    color: $pinkColor;
+    font: {
+      family: $shadowsFont;
+      size: 22px;
+    }
+    border-bottom: 2px solid $pinkColor;
+    display: inline-block;
+    align-self: center;
+  }
+
+  h2 {
+    color: #fff;
+    font: {
+      family: $shadowsFont;
+      size: 16px;
+    }
+    display: inline-block;
+    align-self: center;
+  }
+
+  button {
+    background-color: transparent;
+    color: $pinkColor;
+    font: {
+      family: $senFont;
+      weight: 700;
+    }
+    text: {
+      decoration: underline;
+      transform: uppercase;
+    }
+    border: 0;
+    align-self: flex-end;
+  }
+}
+
+.storeHeader {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.review {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  img {
+    width: 20%;
+  }
+
+  p {
+    width: 75%;
+    color: #fff;
+    font: {
+      family: $senFont;
+      weight: 400;
+    }
+  }
+}
+
+/* CONTACT/FOOTER
+----------------------- */
+
+.footerArea {
+  background-color: $mainColor;
+
+  a {
+    text-decoration: none;
+    display: contents;
+    color: #fff;
+  }
+}
+
+.footerLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerLeftTop {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 20px 5px;
+
+  img {
+    width: 30%;
+    opacity: 0.4;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.footerLeftBottom {
+  color: #fff;
+  padding: 30px 0;
+  font: {
+    family: $poiretFont;
+    size: 22px;
+  }
+  text-align: center;
+  opacity: 0.4;
+}
+
+.footerRight {
+  width: 40%;
+  padding: 2%;
+}
+
+.horizontalLine {
+  height: 1px;
+  width: 90%;
+  background-color: #fff;
+  display: block;
+  opacity: 0.4;
+}
+
+.verticalLine {
+  display: block;
+  height: 75%;
+  width: 1px;
+  background-color: #fff;
+  opacity: 0.3;
+}
+
+.socialFooterIcon {
+  display: flex;
+  color: #fff;
+  opacity: 0.4;
+  padding: 10px 40px;
+  font: {
+    family: $poiretFont;
+    size: 24px;
+  }
+  justify-content: flex-start;
+  align-items: center;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 0.65;
+  }
+
+  img {
+    width: 12%;
+    margin-right: 30px;
+  }
+}
+
+.mobileContact img {
+  width: 14%;
+  opacity: 0.3;
+  padding: 15px 10px;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+/* MEDIA QUERIES
+----------------------- */
+@media (min-width: 768px) {
+  .footerLeftBottom {
+    font-size: 24px;
+  }
+
+  .ticketAvailable,
+  .ticketUnavailable,
+  .ticketFree {
+    width: 200px;
+  }
+}
+
+@media (min-width: 576px) {
+  .storeArea {
+    h1 {
+      font-size: 30px;
+    }
+
+    h2 {
+      font-size: 22px;
+    }
+  }
+
+  .footerLeftTop {
+    padding: 30px 5px;
+
+    img {
+      width: 20%;
+    }
+  }
+}

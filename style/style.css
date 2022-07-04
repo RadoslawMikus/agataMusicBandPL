@@ -1,44 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Poiret+One&family=Russo+One&family=Sen:wght@400;700&family=Shadows+Into+Light+Two&display=swap");
-
 /* GENERAL
 ----------------------- */
-
-:root {
-  --bodyColor: #000;
-  --mainColor: #1a243f;
-  --hoverColor: #e33a3a;
-  --whiteColor: #fff;
-  --pinkColor: #fab6cf;
-  --greenColor: #64a545;
-
-  --nothingFont: "Nothing You Could Do", cursive;
-  --shadowsFont: "Shadows Into Light Two", cursive;
-  --russoFont: "Russo One", sans-serif;
-  --senFont: "Sen", sans-serif;
-  --poiretFont: "Poiret One", cursive;
-}
-
 * {
   padding: 0;
 }
 
-app-content {
-  display: none;
+body {
+  background-color: #000;
 }
 
 .row {
-  padding: 0 !important;
-  margin: 0 !important;
-}
-body {
-  background-color: var(--bodyColor) !important;
+  padding: 0;
+  margin: 0;
 }
 
 /* NAVIGATION
 ----------------------- */
-
 nav {
-  position: absolute !important;
   top: 0;
   left: 0;
   right: 0;
@@ -60,18 +37,19 @@ nav {
 
 .nav-link {
   text-transform: uppercase;
-  color: var(--whiteColor) !important;
   font-size: 18px;
-  font-family: var(--shadowsFont);
+  font-family: "Shadows Into Light Two", cursive;
 }
 
-.nav-link:hover {
-  color: var(--hoverColor) !important;
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #e33a3a;
 }
 
 /* MAIN PHOTO
 ----------------------- */
-
 .mainPhoto {
   height: 100vh;
   background-image: url("../img/mainPhoto.jpg");
@@ -84,20 +62,17 @@ nav {
   top: 50%;
   transform: translate(0, -50%);
 }
-
 .socialIcons ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
-
 .socialIcons img {
   max-width: 50px;
   margin: 5px 0;
   opacity: 0.3;
   transition: 0.2s ease-in-out;
 }
-
 .socialIcons img:hover {
   opacity: 0.9;
   cursor: pointer;
@@ -105,23 +80,19 @@ nav {
 
 /* ALBUM COVER
 ----------------------- */
-
 .coverArea {
-  background-color: var(--mainColor);
-  color: var(--whiteColor);
-  font-family: var(--nothingFont);
+  background-color: #1a243f;
+  font-family: "Nothing You Could Do", cursive;
+  color: #fff;
   padding: 40px 0;
 }
-
 .coverArea img {
   width: 300px;
 }
-
 .coverArea h1 {
-  color: var(--pinkColor);
+  color: #fab6cf;
   font-size: 30px;
 }
-
 .coverArea p {
   font-size: 24px;
 }
@@ -139,36 +110,30 @@ nav {
   justify-content: space-evenly;
   padding: 15px;
 }
-
 .streamingAlbumIcons img {
   width: 20%;
   align-self: flex-end;
   opacity: 0.5;
   transition: 0.2s ease-in-out;
 }
-
 .streamingAlbumIcons img:hover {
   opacity: 0.9;
 }
-
 .streamingAlbumIcons a {
   display: contents;
 }
 
 /* HELLO TEXT
 ----------------------- */
-
 .helloArea {
-  color: var(--whiteColor);
-  font-family: var(--shadowsFont);
+  color: #fff;
+  font-family: "Shadows Into Light Two", cursive;
 }
-
 .helloArea h1 {
-  color: var(--pinkColor);
+  color: #fab6cf;
   text-align: center;
   margin-bottom: 20px;
 }
-
 .helloArea p {
   line-height: 250%;
   font-size: 18px;
@@ -177,74 +142,68 @@ nav {
 
 /* MUSIC
 ----------------------- */
-
 .musicCover {
   position: relative;
   width: 100%;
   height: 100%;
 }
-
 .musicCover img {
   width: 100%;
   height: 100%;
 }
-
-.musicOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: #313131;
-  opacity: 0.6;
-  height: 100%;
-  width: 100%;
-}
-
-.songTitle {
-  position: absolute;
-  z-index: 10000;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  bottom: 0;
-  color: var(--whiteColor);
-  background: rgba(0, 0, 0, 0.4);
-  font-size: 24px;
-  font-family: var(--shadowsFont);
-  width: 80%;
-  text-align: center;
-  padding: 5px 0;
-}
-
-.playButton {
+.musicCover .playButton {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 30% !important;
-  height: 30% !important;
+  width: 30%;
+  height: 30%;
   transform: translate(-50%, -50%);
   opacity: 0.7;
   transition: 0.2s ease-in-out;
   cursor: pointer;
 }
-
-.playButton:hover {
+.musicCover .playButton:hover {
   opacity: 0.9;
+}
+
+.musicOverlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #313131;
+  opacity: 0.6;
+}
+
+.songTitle {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 24px;
+  font-family: "Shadows Into Light Two", cursive;
+  text-align: center;
+  padding: 5px 0;
 }
 
 /* CONCERTS
 ----------------------- */
-
 .concertsArea h1 {
-  color: var(--pinkColor);
+  color: #fab6cf;
   text-align: center;
-  font-family: var(--shadowsFont);
+  font-family: "Shadows Into Light Two", cursive;
 }
 
 .concertRow {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--whiteColor);
+  color: #fff;
 }
 
 .concertInfo {
@@ -253,21 +212,21 @@ nav {
 }
 
 .concertDate {
-  font-family: var(--russoFont);
+  font-family: "Russo One", sans-serif;
   font-size: 3.5vmin;
   flex-basis: 40%;
   flex-shrink: 0;
 }
 
 .concertCity {
-  font-family: var(--senFont);
+  font-family: "Sen", sans-serif;
   font-weight: 700;
   font-size: 22px;
   flex-grow: 1;
 }
 
 .concertLocation {
-  font-family: var(--senFont);
+  font-family: "Sen", sans-serif;
   font-weight: 400;
   font-size: 18px;
   flex-grow: 0;
@@ -281,15 +240,20 @@ nav {
   border: 0;
   border-radius: 21px;
   font-size: 18px;
-  font-family: var(--senFont);
+  font-family: "Sen", sans-serif;
   font-weight: 700;
-  color: var(--whiteColor);
+  color: #fff;
   opacity: 0.9;
   transition: 0.2s ease-in-out;
 }
+.ticketAvailable:hover,
+.ticketUnavailable:hover,
+.ticketFree:hover {
+  opacity: 1;
+}
 
 .ticketAvailable {
-  background-color: var(--mainColor);
+  background-color: #1a243f;
 }
 
 .ticketUnavailable {
@@ -298,56 +262,44 @@ nav {
 }
 
 .ticketFree {
-  background-color: var(--greenColor);
-}
-
-.ticketAvailable:hover,
-.ticketUnavailable:hover,
-.ticketFree:hover {
-  opacity: 1;
+  background-color: #64a545;
 }
 
 /* STORE
 ----------------------- */
-
 .storeArea {
   padding: 0;
 }
-
 .storeArea a {
   display: contents;
 }
-
 .storeArea img {
   width: 100%;
 }
-
 .storeArea h1 {
-  color: var(--pinkColor);
-  font-family: var(--shadowsFont);
+  color: #fab6cf;
+  font-family: "Shadows Into Light Two", cursive;
   font-size: 22px;
-  border-bottom: 2px solid var(--pinkColor);
+  border-bottom: 2px solid #fab6cf;
   display: inline-block;
   align-self: center;
 }
-
 .storeArea h2 {
-  color: var(--whiteColor);
-  font-family: var(--shadowsFont);
+  color: #fff;
+  font-family: "Shadows Into Light Two", cursive;
   font-size: 16px;
   display: inline-block;
   align-self: center;
 }
-
 .storeArea button {
   background-color: transparent;
-  color: var(--pinkColor);
-  font-family: var(--senFont);
+  color: #fab6cf;
+  font-family: "Sen", sans-serif;
+  font-weight: 700;
   text-decoration: underline;
   text-transform: uppercase;
   border: 0;
   align-self: flex-end;
-  font-weight: 700;
 }
 
 .storeHeader {
@@ -365,29 +317,25 @@ nav {
   justify-content: space-between;
   width: 100%;
 }
-
 .review img {
   width: 20%;
 }
-
 .review p {
   width: 75%;
-  color: var(--whiteColor);
-  font-family: var(--senFont);
+  color: #fff;
+  font-family: "Sen", sans-serif;
   font-weight: 400;
 }
 
 /* CONTACT/FOOTER
 ----------------------- */
-
 .footerArea {
-  background-color: var(--mainColor);
+  background-color: #1a243f;
 }
-
 .footerArea a {
   text-decoration: none;
   display: contents;
-  color: var(--whiteColor);
+  color: #fff;
 }
 
 .footerLeft {
@@ -402,21 +350,19 @@ nav {
   align-items: center;
   padding: 20px 20px 5px;
 }
-
 .footerLeftTop img {
   width: 30%;
   opacity: 0.4;
   transition: 0.2s ease-in-out;
 }
-
 .footerLeftTop img:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .footerLeftBottom {
-  color: var(--whiteColor);
+  color: #fff;
   padding: 30px 0;
-  font-family: var(--poiretFont);
+  font-family: "Poiret One", cursive;
   font-size: 22px;
   text-align: center;
   opacity: 0.4;
@@ -430,35 +376,33 @@ nav {
 .horizontalLine {
   height: 1px;
   width: 90%;
-  background-color: var(--whiteColor);
+  background-color: #fff;
   display: block;
   opacity: 0.4;
 }
 
 .verticalLine {
+  display: block;
   height: 75%;
   width: 1px;
-  background-color: var(--whiteColor);
-  display: block;
+  background-color: #fff;
   opacity: 0.3;
 }
 
 .socialFooterIcon {
-  color: var(--whiteColor);
+  display: flex;
+  color: #fff;
   opacity: 0.4;
   padding: 10px 40px;
-  font-family: var(--poiretFont);
+  font-family: "Poiret One", cursive;
   font-size: 24px;
-  display: flex;
   justify-content: flex-start;
   align-items: center;
   transition: 0.2s ease-in-out;
 }
-
 .socialFooterIcon:hover {
-  opacity: 0.9;
+  opacity: 0.65;
 }
-
 .socialFooterIcon img {
   width: 12%;
   margin-right: 30px;
@@ -470,40 +414,35 @@ nav {
   padding: 15px 10px;
   transition: 0.2s ease-in-out;
 }
-
 .mobileContact img:hover {
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
 /* MEDIA QUERIES
 ----------------------- */
-
 @media (min-width: 768px) {
   .footerLeftBottom {
     font-size: 24px;
   }
 
   .ticketAvailable,
-  .ticketUnavailable,
-  .ticketFree {
+.ticketUnavailable,
+.ticketFree {
     width: 200px;
   }
 }
-
 @media (min-width: 576px) {
   .storeArea h1 {
     font-size: 30px;
   }
-
   .storeArea h2 {
     font-size: 22px;
   }
 
-  .footerLeftTop img {
-    width: 20%;
-  }
-
   .footerLeftTop {
     padding: 30px 5px;
+  }
+  .footerLeftTop img {
+    width: 20%;
   }
 }

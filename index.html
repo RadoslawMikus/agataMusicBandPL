@@ -5,12 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AGATA - strona oficjalna</title>
-    <link rel="stylesheet" href="style/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Poiret+One&family=Russo+One&family=Sen:wght@400;700&family=Shadows+Into+Light+Two&display=swap"
+      rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
   </head>
@@ -19,7 +25,7 @@
     NAVBAR
     ----------------------------- -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark position-absolute">
       <a class="navbar-brand" href="#"
         ><img
           src="img/logoAgata.png"
@@ -59,9 +65,9 @@
     MAIN PHOTO
     ----------------------------- -->
 
-    <div id="home" class="container-fluid p-0">
+    <header id="home" class="container-fluid p-0">
       <div class="col-12 mainPhoto p-0"></div>
-      <div class="socialIcons d-none d-lg-block">
+      <sidebar class="socialIcons d-none d-lg-block">
         <ul>
           <li>
             <a href="http://facebook.com"
@@ -85,13 +91,13 @@
             /></a>
           </li>
         </ul>
-      </div>
-    </div>
+      </sidebar>
+    </header>
 
     <!-- -----------------------------
     ALBUM COVER
     ----------------------------- -->
-    <div class="row coverArea">
+    <section class="row coverArea">
       <div
         class="col-md-10 col-lg-8 mx-auto d-flex flex-column flex-md-row justify-content-between align-items-center py-5 px-0"
       >
@@ -123,13 +129,13 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- -----------------------------
     HELLO TEXT
     ----------------------------- -->
 
-    <div class="container helloArea">
+    <section class="container helloArea">
       <div class="row">
         <div class="col-12 col-lg-10 col-xl-8 mx-auto py-5 px-4 px-lg-5">
           <h1>Dzień dobry!</h1>
@@ -148,13 +154,13 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- -----------------------------
     MUSIC
     ----------------------------- -->
 
-    <div id="music" class="musicArea container">
+    <section id="music" class="musicArea container">
       <div class="row g-4 px-xl-5 pt-1 pt-sm-4">
         <div class="col-9 col-sm-6 col-lg-4 mx-auto">
           <div class="musicCover">
@@ -258,13 +264,13 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- -----------------------------
     CONCERTS
     ----------------------------- -->
 
-    <div id="concerts" class="concertsArea container">
+    <section id="concerts" class="concertsArea container">
       <div class="row my-5">
         <div class="col-12 col-xl-10 mx-auto my-4 my-sm-5">
           <h1>Koncerty</h1>
@@ -392,13 +398,13 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- -----------------------------
     STORE
     ----------------------------- -->
 
-    <div id="store" class="storeArea container-fluid">
+    <section id="store" class="storeArea container-fluid">
       <div
         class="row d-flex flex-column flex-lg-row mx-auto align-items-center py-4"
       >
@@ -444,13 +450,13 @@
           <a href="http://allegro.pl"><button>Przejdź do sklepu</button></a>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- -----------------------------
     CONTACT
     ----------------------------- -->
 
-    <div id="contact" class="footerArea container-fluid p-0 mt-5">
+    <footer id="contact" class="footerArea container-fluid p-0 mt-5">
       <div class="row">
         <div
           class="col-12 p-0 d-flex justify-content-around align-items-center"
@@ -533,7 +539,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </footer>
     <script src="script/main.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
