@@ -1,7 +1,7 @@
 # agataMusic - the Band!
 
-### Repository: https://github.com/davidsmith931/agataMusicBandPL
-### Live Demo: https://davidsmith931.github.io/agataMusicBandPL/
+### Repository: https://github.com/RadoslawMikus/agataMusicBandPL
+### Live Demo: https://radoslawmikus.github.io/agataMusicBandPL/
 
 Sample music website made using Bootstrap and JS
 
